@@ -7,7 +7,7 @@
 .container {
   border: black 2px solid;
   border-radius: 10px;
-  margin: 200px auto;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
