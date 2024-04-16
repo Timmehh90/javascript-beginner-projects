@@ -57,8 +57,16 @@
   padding-bottom: 30px;
 }
 
+.container ol {
+  list-style-type: decimal;
+  width: 60%;
+}
+
 #to-do-list li {
+  color: var(--prim-clr-700);
   padding: 4px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn {

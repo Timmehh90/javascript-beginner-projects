@@ -14,17 +14,17 @@ function addToList(event) {
   const inputValue = textInput.value.trim();
   if (textInput !== null && inputValue !== "") {
     const listItem = document.createElement("li");
-    const span = document.createElement("span");
+    const div = document.createElement("div");
     const button = document.createElement("button");
     button.textContent = "X";
-    button.classList.add("btn");
+    button.classList.add("btn", "delBtn");
     button.addEventListener("click", () => {
       const thisItem = button.parentElement;
       toDoList.removeChild(thisItem);
     });
     listItem.classList.add("listItem");
-    span.textContent = textInput.value;
-    listItem.appendChild(span);
+    div.textContent = textInput.value;
+    listItem.appendChild(div);
     listItem.appendChild(button);
     toDoList.appendChild(listItem);
     textInput.value = "";
