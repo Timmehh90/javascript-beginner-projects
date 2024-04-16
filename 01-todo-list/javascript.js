@@ -19,11 +19,11 @@ function addToList(event) {
     listItem.textContent = textInput.value;
     toDoList.appendChild(listItem);
     textInput.value = "";
-  }
+  } // This function will add the user input to the To-Do List when the input is not empty.
 }
 
 function clearAll() {
   while (toDoList.firstChild) {
     toDoList.removeChild(toDoList.firstChild);
-  }
+  } // This function will remove all items from the list.
 }
