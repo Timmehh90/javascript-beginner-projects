@@ -18,7 +18,7 @@
 
 .container form {
   padding: 50px;
-  scale: 1.2;
+  transform: scale(1.2);
 }
 
 .container h1 {

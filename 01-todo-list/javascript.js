@@ -8,7 +8,8 @@ const toDoList = document.querySelector("#to-do-list");
 submitBtn.onclick = addToList;
 
 // Functions
-function addToList() {
+function addToList(event) {
+  event.preventDefault();
   const listItem = document.createElement("li");
   console.log("Created <li> for the information input");
 
