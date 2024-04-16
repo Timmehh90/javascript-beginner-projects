@@ -28,6 +28,7 @@ function addToList(event) {
     listItem.appendChild(button);
     toDoList.appendChild(listItem);
     textInput.value = "";
+    textInput.focus(); // Focus on textInput
   } // This function will add the user input to the To-Do List when the input is not empty.
 }
 
