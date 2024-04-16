@@ -4,8 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --prim-clr-50: #f8fafc;
+  --prim-clr-200: #e2e8f0;
+  --prim-clr-500: #64748b;
+  --prim-clr-700: #334155;
+  --prim-clr-900: #0f172a;
+}
+
 .container {
-  border: black 2px solid;
+  border: var(--prim-clr-900) 2px solid;
   border-radius: 10px;
   margin: 20px auto;
   display: flex;
@@ -24,13 +32,19 @@
 .container h1 {
   font-size: 3.5rem;
   margin-top: 40px;
+  color: var(--prim-clr-700);
 }
 
 #list-input {
-  border-color: blue;
-  background-color: cyan;
+  border-color: var(--prim-clr-900);
+  background-color: var(--prim-clr-500);
+  color: var(--prim-clr-200);
   padding: 2px;
   border-radius: 5px;
+}
+
+#list-input::placeholder {
+  color: var(--prim-clr-200);
 }
 
 #to-do-list {
@@ -41,4 +55,11 @@
 
 #to-do-list li {
   padding: 4px 0;
+}
+
+.btn {
+  padding: 2px;
+  color: var(--prim-clr-200);
+  background: var(--prim-clr-700);
+  border-radius: 5px;
 }

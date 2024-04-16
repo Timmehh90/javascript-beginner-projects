@@ -17,6 +17,7 @@ function addToList(event) {
     const span = document.createElement("span");
     const button = document.createElement("button");
     button.textContent = "X";
+    button.classList.add("btn");
     button.addEventListener("click", () => {
       const thisItem = button.parentElement;
       toDoList.removeChild(thisItem);
