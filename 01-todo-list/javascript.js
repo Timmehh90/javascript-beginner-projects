@@ -6,6 +6,7 @@ const toDoList = document.querySelector("#to-do-list");
 
 // Events
 submitBtn.onclick = addToList;
+clearAllBtn.onclick = clearAll;
 
 // Functions
 function addToList(event) {
@@ -16,4 +17,10 @@ function addToList(event) {
   listItem.textContent = textInput.value;
   toDoList.appendChild(listItem);
   textInput.value = "";
+}
+
+function clearAll() {
+  while (toDoList.firstChild) {
+    toDoList.removeChild(toDoList.firstChild);
+  }
 }
