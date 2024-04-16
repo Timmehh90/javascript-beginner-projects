@@ -11,12 +11,15 @@ clearAllBtn.onclick = clearAll;
 // Functions
 function addToList(event) {
   event.preventDefault();
-  const listItem = document.createElement("li");
+  const inputValue = textInput.value.trim();
+  if (textInput !== null && inputValue !== "") {
+    const listItem = document.createElement("li");
 
-  listItem.classList.add("listItem");
-  listItem.textContent = textInput.value;
-  toDoList.appendChild(listItem);
-  textInput.value = "";
+    listItem.classList.add("listItem");
+    listItem.textContent = textInput.value;
+    toDoList.appendChild(listItem);
+    textInput.value = "";
+  }
 }
 
 function clearAll() {
