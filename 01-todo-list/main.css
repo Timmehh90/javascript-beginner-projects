@@ -75,3 +75,7 @@
   background: var(--prim-clr-700);
   border-radius: 5px;
 }
+
+.delBtn {
+  padding: 3px 5px;
+}
