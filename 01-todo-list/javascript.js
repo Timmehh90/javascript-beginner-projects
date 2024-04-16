@@ -14,9 +14,17 @@ function addToList(event) {
   const inputValue = textInput.value.trim();
   if (textInput !== null && inputValue !== "") {
     const listItem = document.createElement("li");
-
+    const span = document.createElement("span");
+    const button = document.createElement("button");
+    button.textContent = "X";
+    button.addEventListener("click", () => {
+      const thisItem = button.parentElement;
+      toDoList.removeChild(thisItem);
+    });
     listItem.classList.add("listItem");
-    listItem.textContent = textInput.value;
+    span.textContent = textInput.value;
+    listItem.appendChild(span);
+    listItem.appendChild(button);
     toDoList.appendChild(listItem);
     textInput.value = "";
   } // This function will add the user input to the To-Do List when the input is not empty.
