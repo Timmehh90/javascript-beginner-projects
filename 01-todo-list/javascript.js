@@ -10,30 +10,34 @@ clearAllBtn.onclick = clearAll;
 
 // Functions
 function addToList(event) {
-  event.preventDefault();
-  const inputValue = textInput.value.trim();
+  event.preventDefault(); // Prevent default submit event from happening.
+  const inputValue = textInput.value.trim(); // Trim spaces from the input
   if (textInput !== null && inputValue !== "") {
-    const listItem = document.createElement("li");
-    const div = document.createElement("div");
-    const button = document.createElement("button");
-    button.textContent = "X";
-    button.classList.add("btn", "delBtn");
+    // If there is input continue
+    const listItem = document.createElement("li"); // Create <li> item
+    const div = document.createElement("div"); // Create <div> item
+    const button = document.createElement("button"); // Create delete button
+    button.textContent = "X"; // Fill button with X as text
+    button.classList.add("btn", "delBtn"); // Add classes to the button
     button.addEventListener("click", () => {
-      const thisItem = button.parentElement;
-      toDoList.removeChild(thisItem);
+      // Add event listener to button
+      const thisItem = button.parentElement; // Select parent element
+      toDoList.removeChild(thisItem); // Delete selected element
     });
-    listItem.classList.add("listItem");
-    div.textContent = textInput.value;
-    listItem.appendChild(div);
-    listItem.appendChild(button);
-    toDoList.appendChild(listItem);
-    textInput.value = "";
+    listItem.classList.add("listItem"); // Add class to each <li> item
+    div.textContent = textInput.value; // Add input value to the <div>
+    listItem.appendChild(div); // Append div as a child of listItem or <li>
+    listItem.appendChild(button); // Append button as a child of listItem or <li>
+    toDoList.appendChild(listItem); // Append the list item to the html Ordered List
+    textInput.value = ""; // Return input value to empty
     textInput.focus(); // Focus on textInput
   } // This function will add the user input to the To-Do List when the input is not empty.
 }
 
 function clearAll() {
+  // Clears all list items
   while (toDoList.firstChild) {
-    toDoList.removeChild(toDoList.firstChild);
+    // while the ordered list has a child, do:
+    toDoList.removeChild(toDoList.firstChild); // Remove selected child
   } // This function will remove all items from the list.
 }
